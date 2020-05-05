@@ -1,0 +1,5 @@
+{
+    "pkgWatch": {
+        "pixi.js": "../pixi.js/bundles/pixi.js/lib/pixi"
+    }
+}
