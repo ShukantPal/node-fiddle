@@ -8,13 +8,28 @@ The use of ECMAScript allows you to copy/paste your fiddle to online JavaScript 
 
 ## Usage
 
-Clone the repository to use it as a starting point for your own Pixi.js experiments and then remove the remote to clear the way for your own git repo usage
+Clone the repository and create your first fiddle:
 
-1) `git clone git clone git@github.com:alkamin/pixijs-template.git some-pixi-experiment`
-2) `cd some-pixi-experiment`
-3) `npm run reinit`
+1) `git clone https://github.com/SukantPal/pixi-fiddle`
+2) `npm run open -- --fiddle basic-fiddle`
+3) `npm run start`
 
-The entry point is `src/index.js` which already has a Pixi.js app initialized.
+The entry point is `src/index.js`. This will be initialized with some boilerplate code.
+
+## Config File
+
+You can create a config file `fiddle.config.json` to register your local PixiJS repo. For example,
+
+```
+{
+    pkgWatch: {
+        "pixi.js" "../pixi.js/bundles/pixi.js/lib/pixi"
+    }
+}
+```
+
+Make sure path is to the CommonJS bundle (not the project root). Support for adding more packages will be
+added.
 
 ### Assets
 
