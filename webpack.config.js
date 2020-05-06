@@ -36,6 +36,10 @@ module.exports = {
                     name: '[name].[ext]',
                 },
             },
+            {
+                test: /\.(vert|frag|glsl)$/,
+                loader: 'raw-loader',
+            },
         ],
     },
     plugins: [

@@ -6,7 +6,10 @@
 # I don't wanna upload my personal fiddle config, do I?
 fiddle.config.json
 # I moved my fiddles here before creating this packages :) for saftey :P
+src/*
 src-test
+# export directory contains the standalone "fiddle"
+export
 
 # dependencies
 /node_modules
