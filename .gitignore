@@ -12,6 +12,10 @@ src-test
 # export directory contains the standalone "fiddle"
 export
 
+# staging
+/tools/staging/*
+!/tools/staging/README.md
+
 # dependencies
 /node_modules
 /.pnp

@@ -1,9 +1,10 @@
-const { log, LogLevel } = require('missionlog');
+const { log, LogLevel, tag } = require('missionlog');
 
 log.init(
     {
         fiddle: 'INFO',
         out: 'INFO',
+        TODO: 'INFO',
     },
     (level, tag, msg, params) =>
     {
@@ -28,3 +29,6 @@ log.init(
                 break;
         }
     });
+
+module.exports.log = log;
+module.exports.tag = tag;

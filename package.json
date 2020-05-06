@@ -13,7 +13,8 @@
     "pwf": "node ./tools/commands/pwf",
     "delete": "node ./tools/commands/delete-fiddle",
     "revise": "node ./tools/commands/revise-fiddle",
-    "export": "rollup -c"
+    "export": "rollup -c",
+    "import": "node ./tools/commands/import-fiddle"
   },
   "keywords": [],
   "author": "Shukant Pal",
@@ -41,6 +42,7 @@
   },
   "dependencies": {
     "fs-extra": "^9.0.0",
+    "jsdom": "^16.2.2",
     "jsfiddle-downloader": "^0.2.2",
     "minimist": "^1.2.5",
     "missionlog": "^1.6.0",
