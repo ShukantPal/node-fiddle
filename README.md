@@ -23,7 +23,7 @@ Your fiddles are stored in the `fiddle-workspace` directory. This package helps 
 <ul>
     <li><code>open</code>: <code>npm run open -- --fiddle my-fiddle</code>
 
-This will save the current fiddle and "open" the fiddle passed via <code--fiddle</code>. Opening a fiddle just copies its contents into the source directory.
+This will save the current fiddle and "open" the fiddle passed via <code>--fiddle</code>. Opening a fiddle just copies its contents into the source directory.
 
 You can pass a <code>--no-save</code> option to "forget" the current fiddle state.
 
@@ -49,10 +49,10 @@ This will change the version suffix of your fiddle name. You can use this before
 
 You can create a config file `fiddle.config.json` to register your local PixiJS repo. For example,
 
-```
+```json
 {
     pkgWatch: {
-        "pixi.js" "../pixi.js/bundles/pixi.js/lib/pixi"
+        "pixi.js": "../pixi.js/bundles/pixi.js/lib/pixi"
     }
 }
 ```
