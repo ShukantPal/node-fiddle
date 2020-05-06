@@ -16,6 +16,35 @@ Clone the repository and create your first fiddle:
 
 The entry point is `src/index.js`. This will be initialized with some boilerplate code.
 
+Your fiddles are stored in the `fiddle-workspace` directory. This package helps you copy fiddles from and to the source directory `src`.
+
+## Commands
+
+<ul>
+    <li><code>open</code>: <code>npm run open -- --fiddle my-fiddle</code>
+
+This will save the current fiddle and "open" the fiddle passed via <code--fiddle</code>. Opening a fiddle just copies its contents into the source directory.
+
+You can pass a <code>--no-save</code> option to "forget" the current fiddle state.
+
+<li><code>flush</code>: <code>npm run flush</code>
+
+This will save the current fiddle. You can use this before you start tearing down stuff in your fiddle for refactoring/restructuring something big!
+
+<li><code>delete</code>: <code>npm run delete my-fiddle</code>
+
+This is used to delete the fiddle saved in `fiddle-workspace`. It will not reset the source directory contents.
+
+<li><code>pwf</code>: <code>npm run pwf</code>
+    
+This will "print working fiddle" or the fiddle that is currently opened in <code>src</code>.
+
+<li><code>revise</code>: <code>npm run revise</code>
+    
+This will change the version suffix of your fiddle name. You can use this before flushing your fiddle to keep a "history" of your changes. If the current fiddle is <code>my-fiddle</code>, then it will become <code>my-fiddle-1</code>.
+
+</ul>
+
 ## Config File
 
 You can create a config file `fiddle.config.json` to register your local PixiJS repo. For example,
