@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "fs-extra": "^9.0.0",
+    "jsfiddle-downloader": "^0.2.2",
     "minimist": "^1.2.5",
     "missionlog": "^1.6.0",
     "ncp": "^2.0.0",

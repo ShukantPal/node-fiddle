@@ -1,5 +1,5 @@
 const PIXI = window.PIXI || require('../../pixi.js/bundles/pixi.js/lib/pixi');
-const { InstancedRendererPluginFactory } = window.PIXI || require('../../pixi-essentials/packages/instanced-renderer/lib/instanced-renderer.cjs');
+const { InstancedRendererPluginFactory } = require('../../pixi-essentials/packages/instanced-renderer/lib/instanced-renderer.cjs');
 
 const geomVertexSrc = require('./geom.vert').default;
 const geomFragSrc = require('./geom.frag').default;

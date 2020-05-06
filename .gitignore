@@ -2,6 +2,7 @@
 
 # fiddle-workspace
 /fiddle-workspace/*
+!/fiddle-workspace/README.md
 
 # I don't wanna upload my personal fiddle config, do I?
 fiddle.config.json
