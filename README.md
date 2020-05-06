@@ -45,6 +45,10 @@ This will "print working fiddle" or the fiddle that is currently opened in <code
     
 This will change the version suffix of your fiddle name. You can use this before flushing your fiddle to keep a "history" of your changes. If the current fiddle is <code>my-fiddle</code>, then it will become <code>my-fiddle-1</code>.
 
+<li><code>export</code>: <code>npm run export</code>
+    
+This will rollup all JS files in your `src` directory using RollupJS. It also "tries" to erase any local requires to packages given in `pkgWatch` (config file). The resulting fiddle is placed in the `export` directory.
+
 </ul>
 
 ## Config File
