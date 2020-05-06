@@ -3,10 +3,16 @@ const { log, LogLevel } = require('missionlog');
 log.init(
     {
         fiddle: 'INFO',
+        out: 'INFO',
     },
     (level, tag, msg, params) =>
     {
-        const prefix = `${level}: [${tag}] `;
+        let prefix = `${level}: [${tag}] `;
+
+        if (tag === 'out')
+        {
+            prefix = (level === 'INFO') ? `$` : `${level}: `;
+        }
 
         switch (level)
         {

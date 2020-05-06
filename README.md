@@ -31,6 +31,11 @@ You can create a config file `fiddle.config.json` to register your local PixiJS 
 Make sure path is to the CommonJS bundle (not the project root). Support for adding more packages will be
 added.
 
+## Template
+
+If you want to change what code new fiddles have, change the tools/template folder and update `template.registrar.json`
+with the files you want "processed".
+
 ### Assets
 
 All assets are placed in the `src/assets/` directory and will be available to the app at `assets/`.

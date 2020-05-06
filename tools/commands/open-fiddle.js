@@ -6,8 +6,11 @@ const log = require('missionlog').log;
 const template = require('../utils/template');
 const fse = require('fs-extra');
 const config = require('../utils/config');
+const yesno = require('yesno');
 
 const args = require('minimist')(process.argv.slice(2));
+
+console.log(args);
 
 async function main()
 {
@@ -29,30 +32,43 @@ async function main()
         fs.mkdirSync(srcDir);
     }
 
-    if (!wk.fiddle)
+    let noSave = !args.save;
+
+    if (noSave)
     {
-        console.warn('The current fiddle has no name. It is being saved to fiddle-workspace/.fiddle-archive');
-
-        const fiddleArchiveDir = path.join(basePath, 'fiddle-workspace/.fiddle-archive');
-
-        rimraf.sync(path.join(fiddleArchiveDir, './*'));
-
-        fse.copySync(srcDir, fiddleArchiveDir);
-
-        rimraf.sync(path.join(srcDir, './*'));
+        noSave = await yesno({
+            question: 'Do you want to delete the current source directory?',
+            defaultValue: null,
+        });
     }
-    else
+
+    if (!noSave)
     {
-        // eslint-disable-next-line
-        console.log(`Saving current fiddle: ${wk.fiddle}`);
+        if (!wk.fiddle)
+        {
+            console.warn('The current fiddle has no name. It is being saved to fiddle-workspace/.fiddle-archive');
 
-        const fiddleDir = path.join(basePath, `fiddle-workspace/${wk.fiddle}`);
+            const fiddleArchiveDir = path.join(basePath, 'fiddle-workspace/.fiddle-archive');
 
-        rimraf.sync(path.join(fiddleDir, './*'));
+            rimraf.sync(path.join(fiddleArchiveDir, './*'));
 
-        fse.copySync(srcDir, fiddleDir);
+            fse.copySync(srcDir, fiddleArchiveDir);
 
-        rimraf.sync(path.join(srcDir, './*'));
+            rimraf.sync(path.join(srcDir, './*'));
+        }
+        else
+        {
+            // eslint-disable-next-line
+            console.log(`Saving current fiddle: ${wk.fiddle}`);
+
+            const fiddleDir = path.join(basePath, `fiddle-workspace/${wk.fiddle}`);
+
+            rimraf.sync(path.join(fiddleDir, './*'));
+
+            fse.copySync(srcDir, fiddleDir);
+
+            rimraf.sync(path.join(srcDir, './*'));
+        }
     }
 
     const fiddleDir = path.join(workspacePath, args.fiddle);

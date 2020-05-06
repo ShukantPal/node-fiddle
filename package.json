@@ -9,7 +9,10 @@
     "reinit": "rm -rf .git && git init",
     "fiddle": "node ./tools/commands/open-fiddle",
     "open": "node ./tools/commands/open-fiddle",
-    "flush": "node ./tools/commands/flush-fiddle"
+    "flush": "node ./tools/commands/flush-fiddle",
+    "pwf": "node ./tools/commands/pwf",
+    "delete": "node ./tools/commands/delete-fiddle",
+    "revise": "node ./tools/commands/revise-fiddle"
   },
   "keywords": [],
   "author": "Shukant Pal",
@@ -40,6 +43,7 @@
     "pixi.js-legacy": "^5.2.1",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3",
-    "yargs": "^15.3.1"
+    "yargs": "^15.3.1",
+    "yesno": "^0.3.1"
   }
 }

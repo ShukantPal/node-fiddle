@@ -1,8 +1,8 @@
+// flush-fiddle saves the srcDir into fiddleDir
+
 const fse = require('fs-extra');
 const path = require('path');
 const workspace = require('../utils/workspace');
-
-const args = require('minimist')(process.argv.slice(2));
 
 const basePath = process.cwd();
 const srcDir = path.join(basePath, './src');
