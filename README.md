@@ -27,6 +27,8 @@ This will save the current fiddle and "open" the fiddle passed via <code>--fiddl
 
 You can pass a <code>--no-save</code> option to "forget" the current fiddle state.
 
+**This is also the current way to create a new fiddle!**
+
 <li><code>flush</code>: <code>npm run flush</code>
 
 This will save the current fiddle. You can use this before you start tearing down stuff in your fiddle for refactoring/restructuring something big!
