@@ -51,7 +51,7 @@ You can create a config file `fiddle.config.json` to register your local PixiJS 
 
 ```json
 {
-    pkgWatch: {
+    "pkgWatch": {
         "pixi.js": "../pixi.js/bundles/pixi.js/lib/pixi"
     }
 }
