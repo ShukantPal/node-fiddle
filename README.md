@@ -1,5 +1,20 @@
-# @pixi-build-tools/fiddle
+<h2 align="center">
+[@pixi-build-tools/]fiddle
+</h2>
+
+<p align="center">
+    <span>
+        <img alt="npm (tag)" src="https://img.shields.io/npm/v/@pixi-build-tools/fiddle/latest">
+        &#8287;
+        <img alt="David" src="https://img.shields.io/david/sukantpal/pixi-fiddle">
+        &#8287;
+        <img alt="npm collaborators" src="https://img.shields.io/npm/collaborators/@pixi-build-tools/fiddle">
+    </span>
+</p>
+
+<p align="center">
 PixiJS + webpack + Babel + @pixi/eslint-config
+</p>
 
 This package spun off of @alkamin's pixijs-template repo. I have tuned this for local development of PixiJS
 so that **you can test your changes to pixi.js-related packages locally**.
@@ -18,12 +33,20 @@ The entry point is `src/index.js`. This will be initialized with some boilerplat
 
 Your fiddles are stored in the `fiddle-workspace` directory. This package helps you copy fiddles from and to the source directory `src`.
 
+## Features
+
+* Creating and switching between different fiddles
+
+* Bundling up JavaScript & GLSL files into one fiddle file
+
+* Importing JSFiddles with one command
+
 ## Commands
 
 <ul>
     <li><code>open</code>: <code>npm run open -- --fiddle my-fiddle</code>
 
-This will save the current fiddle and "open" the fiddle passed via <code>--fiddle</code>. Opening a fiddle just copies its contents into the source directory.
+This will save the current fiddle and "open" the fiddle passed via <code>--fiddle</code>. Opening a fiddle just copies its contents into the source directory
 
 You can pass a <code>--no-save</code> option to "forget" the current fiddle state.
 
@@ -48,6 +71,10 @@ This will change the version suffix of your fiddle name. You can use this before
 <li><code>export</code>: <code>npm run export</code>
     
 This will rollup all JS files in your `src` directory using RollupJS. It also "tries" to erase any local requires to packages given in `pkgWatch` (config file). The resulting fiddle is placed in the `export` directory.
+
+<li><code>import</code>: <code>npm run import $url$ </code>
+    
+This will download the JSFiddle <code>$url$</code> and extract the JavaScript into `index.js` (and save the file `index.html`). This saves the current fiddle before overwriting the `src` directory.
 
 </ul>
 
