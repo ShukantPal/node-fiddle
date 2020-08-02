@@ -16,7 +16,7 @@ module.exports.download = function downloadJSFiddle(url)
     let fiddlePath = path.parse(url.pathname);
 
     // We don't want the revision
-    if (!isNaN(parseInt(fiddlePath.name, 10)))
+    if (!isNaN(parseInt(fiddlePath.name, 10)) && parseInt(fiddlePath.name, 10).toString() === fiddlePath.name)
     {
         fiddlePath = path.parse(path.resolve(url.pathname, '../'));
     }

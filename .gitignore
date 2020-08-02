@@ -9,6 +9,8 @@ fiddle.config.json
 # I moved my fiddles here before creating this packages :) for saftey :P
 src/*
 src-test
+# dist
+dist/*
 # export directory contains the standalone "fiddle"
 export
 

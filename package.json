@@ -1,10 +1,10 @@
 {
   "name": "@pixi-build-tools/fiddle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack + Babel Pixi.js Template",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --open --mode development --writeToDisk",
     "build": "webpack --mode production",
     "reinit": "rm -rf .git && git init",
     "fiddle": "node ./tools/commands/open-fiddle",
@@ -31,7 +31,7 @@
     "file-loader": "^6.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "pixi-batch-renderer": "^1.0.1",
+    "pixi-batch-renderer": "^2.3.2",
     "puxi.js": "0.0.5",
     "raw-loader": "^4.0.1",
     "rollup": "^2.7.6",
@@ -41,6 +41,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@pixi/filter-drop-shadow": "^3.1.1",
+    "@puxi/core": "^0.0.4",
     "fs-extra": "^9.0.0",
     "jsdom": "^16.2.2",
     "jsfiddle-downloader": "^0.2.2",
@@ -52,6 +54,7 @@
     "pixi.js-legacy": "^5.2.4",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3",
+    "write-file-webpack-plugin": "^4.5.1",
     "yargs": "^15.3.1",
     "yesno": "^0.3.1"
   }

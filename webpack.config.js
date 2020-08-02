@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const WriteFilePlugin = require('write-file-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -48,8 +49,9 @@ module.exports = {
             filename: './index.html',
         }),
         new CopyWebpackPlugin([{
-            from: './src/assets', to: './assets',
+            from: './src/assets', to: './',
         }]),
+        //       new WriteFilePlugin()
     ],
     watchOptions: {
         aggregateTimeout: 300,

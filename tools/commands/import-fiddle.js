@@ -15,6 +15,8 @@ async function main()
     {
         const fpath = await jsfiddle.download(fiddleUrl);
 
+        console.log(fpath);
+
         jsfiddle.process(fpath);
 
         return;
