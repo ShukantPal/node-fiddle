@@ -13,6 +13,7 @@ src-test
 dist/*
 # export directory contains the standalone "fiddle"
 export
+scripts/*
 
 # staging
 /tools/staging/*

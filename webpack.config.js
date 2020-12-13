@@ -11,7 +11,7 @@ module.exports = {
         filename: 'app.bundle.js',
     },
     resolve: {
-        mainFields: ['main'],
+        mainFields: ['main']
     },
     module: {
         rules: [
